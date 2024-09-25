@@ -28,7 +28,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "app2",
-      filename: "remoteEntry.js",
+      filename: "remoteEntry2.js",
       exposes: {
         // expose each component
         "./CounterAppTwo": "./src/components/CounterAppTwo",
