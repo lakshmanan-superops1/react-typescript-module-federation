@@ -6,6 +6,11 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   entry: "./src/index.ts",
   mode: "development",
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].js',
+    assetModuleFilename: "[path][name][ext]",
+  },
   devServer: {
     port: 3001,
     open: true,

@@ -4,6 +4,7 @@ const { ModuleFederationPlugin } = webpack.container;
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const deps = require("./package.json").dependencies;
 require("dotenv").config({ path: "./.env" });
+const path = require("path");
 
 const buildDate = new Date().toLocaleString();
 
@@ -21,6 +22,11 @@ module.exports = (env, argv) => {
     },
     resolve: {
       extensions: [".ts", ".tsx", ".js"],
+    },
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      filename: '[name].js',
+      assetModuleFilename: "[path][name][ext]",
     },
     module: {
       rules: [
