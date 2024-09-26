@@ -23,6 +23,7 @@ export const ContainerApp = ({
   CounterAppOne,
   CounterAppTwo,
 }: ContainerAppProps) => {
+  debugger;
   return (
     <Center
       height="100vh"

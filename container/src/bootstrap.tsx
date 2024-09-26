@@ -11,6 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <ChakraProvider>
     <BrowserRouter>
+      <h1>Root File</h1>
       <App />
     </BrowserRouter>
   </ChakraProvider>
